@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoe Showcase</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">OLIENG®</div>
+    <div class="menu-icon">☰</div>
+    <div class="language-switch">
+      <span>EN</span> | <span>TH</span>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <div class="product-info">
+      <span class="product-number"></span>
+      <div class="text-container" id="text-container">
+        <div class="product-name">AIRMAX</div>
+      </div>
+    </div>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide" id="slide1">
+          <img src="nike.png" alt="Slide 1">
+        </div>
+        <div class="slide" id="slide2">
+          <img src="nike2.png" alt="Slide 2">
+        </div>
+        <div class="slide" id="slide3">
+          <img src="nike3.png" alt="Slide 3">
+        </div>
+        <div class="slide" id="slide3">
+          <img src="nike4.png" alt="Slide 3">
+        </div>
+      </div>
+      <div class="slider-indicators">
+        <div class="index" id="indicator1"></div>
+        <div class="index" id="indicator2"></div>
+        <div class="index" id="indicator3"></div>
+        <div class="index" id="indicator4"></div>
+      </div>
+    </div>
+  </main>
+  <div class="scroll-text">Scroll to Discover</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
