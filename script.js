@@ -72,16 +72,16 @@ function updateContent() {
   
     switch (productNumber) {
       case '01':
-        newText = 'AIRMAX';
+        newText = "DUNKLOW";
         break;
       case '02':
-        newText = 'AIRFORCE';
-        break;
-      case '03':
         newText = 'DUNKLOW';
         break;
+      case '03':
+        newText = 'AIRFORCE';
+        break;
       case '04':
-        newText = 'NIKE';
+        newText = 'AIRMAX';
         break;
     }
   
