@@ -143,6 +143,42 @@ window.addEventListener('wheel', (event) => {
     showPreviousSlide();
   }
 });
+/////////////////////////////////////////////////
+let startX = 0;
+let endX = 0;
+
+// ฟังก์ชันเริ่มต้นเมื่อแตะหน้าจอ
+function handleTouchStart(event) {
+  startX = event.touches[0].clientX; // ตำแหน่ง X ตอนเริ่มสัมผัส
+}
+
+// ฟังก์ชันเมื่อเลื่อนนิ้ว
+function handleTouchMove(event) {
+  endX = event.touches[0].clientX; // ตำแหน่ง X ตอนเลื่อน
+}
+
+// ฟังก์ชันเมื่อปล่อยนิ้ว
+function handleTouchEnd() {
+  const deltaX = endX - startX;
+
+  if (Math.abs(deltaX) > 50) { // หากการเลื่อนมากกว่า 50px
+    if (deltaX > 0) {
+      showPreviousSlide(); // ปัดไปทางขวา -> สไลด์ก่อนหน้า
+    } else {
+      showNextSlide(); // ปัดไปทางซ้าย -> สไลด์ถัดไป
+    }
+  }
+
+  // รีเซ็ตค่า
+  startX = 0;
+  endX = 0;
+}
+
+// เพิ่ม Event Listeners สำหรับ Touch Events
+const sliderContainer = document.querySelector('.slider-container');
+sliderContainer.addEventListener('touchstart', handleTouchStart);
+sliderContainer.addEventListener('touchmove', handleTouchMove);
+sliderContainer.addEventListener('touchend', handleTouchEnd);
 
 
 
